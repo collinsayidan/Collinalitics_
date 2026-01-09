@@ -1,36 +1,86 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Collinalitics Portfolio
 
-## Getting Started
+A modern, full‑stack portfolio showcasing my work across **Analytics**, **System Engineering**, **Frontend Architecture**, and **Motion Design**.  
+Built with a production‑ready stack and deployed on Vercel with a custom domain.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Purpose
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+This portfolio demonstrates my ability to:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Build scalable, modern web applications  
+- Design premium UI/UX experiences  
+- Integrate backend services and databases  
+- Deliver clean, maintainable, production‑grade code  
+- Communicate technical work clearly and professionally  
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## Highlights
 
-To learn more about Next.js, take a look at the following resources:
+- Fully responsive, modern interface  
+- Dynamic project pages with structured data  
+- PDF export for each project  
+- Contact form with:
+  - Validation  
+  - Spam protection  
+  - Email notifications  
+  - Database storage  
+- Smooth animations using Framer Motion  
+- SEO‑optimized metadata  
+- Custom domain integration (123 Reg → Vercel)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Tech Stack
 
-## Deploy on Vercel
+- **Next.js 16 (App Router)**  
+- **TypeScript**  
+- **TailwindCSS**  
+- **Framer Motion**  
+- **Prisma ORM**  
+- **PostgreSQL (Render)**  
+- **Nodemailer**  
+- **Vercel Deployment**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Key Features
+
+### 🔹 Full‑Stack Engineering  
+API routes handle form submissions, PDF generation, and database writes.
+
+### 🔹 Database Integration  
+Prisma + PostgreSQL for structured, reliable data storage.
+
+### 🔹 Production‑Ready Architecture  
+Includes environment variable management, dynamic routing, and server‑safe patterns.
+
+### 🔹 Brand‑Driven UI  
+Designed with a premium, soft‑dark aesthetic aligned with the Collinalitics identity.
+
+### 🔹 Performance & SEO  
+Optimized metadata, fast load times, and clean semantic structure.
+
+---
+
+## Live Demo
+
+**https://collinalitics.com**
+
+---
+
+## Contact
+
+If you're reviewing this as part of a hiring process, feel free to reach out:
+
+- **Email:** your-email  
+- **GitHub:** https://github.com/collinsayidan  
+- **Portfolio:** https://collinalitics.vercel.app/ 
+
+---
+
+## License
+
+MIT License.
