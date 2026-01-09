@@ -24,3 +24,114 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradientShift 6s ease infinite;
+}
+html.light {
+  --background: #ffffff;
+  --foreground: #111111;
+}
+html.dark {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradientShift 6s ease infinite;
+}
+
+@keyframes eq1 {
+  0%, 100% { height: 4px; }
+  50% { height: 14px; }
+}
+
+@keyframes eq2 {
+  0%, 100% { height: 10px; }
+  50% { height: 4px; }
+}
+
+@keyframes eq3 {
+  0%, 100% { height: 6px; }
+  50% { height: 16px; }
+}
+
+.animate-eq1 { animation: eq1 1s infinite ease-in-out; }
+.animate-eq2 { animation: eq2 1s infinite ease-in-out; }
+.animate-eq3 { animation: eq3 1s infinite ease-in-out; }
+
+@keyframes fadeInOut {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 1; }
+}
+
+.animate-fade {
+  animation: fadeInOut 4s ease-in-out infinite;
+}
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 5px rgba(255, 255, 255, 0.2); }
+  50% { box-shadow: 0 0 15px rgba(255, 255, 255, 0.6); }
+}
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+.animate-pulseGlow {
+  animation: pulseGlow 3s ease-in-out infinite;
+}
+
+
+
+:root {
+  --accent-1: #2563eb;
+  --accent-2: #7c3aed;
+}
+
+.theme-emerald {
+  --accent-1: #10b981;
+  --accent-2: #14b8a6;
+}
+
+.theme-gold {
+  --accent-1: #f59e0b;
+  --accent-2: #fbbf24;
+}
+
+.theme-rose {
+  --accent-1: #e11d48;
+  --accent-2: #ec4899;
+}

@@ -39,3 +39,32 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+/lib/generated/prisma
+
+# Environment variables
+.env.local
+.env.development
+.env.production
+.env.test
+
+# Node
+node_modules/
+npm-debug.log
+dist/
+.next/
+out/
+build/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
