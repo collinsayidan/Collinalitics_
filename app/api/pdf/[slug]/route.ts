@@ -3,9 +3,9 @@ import { projectData } from "@/app/projects/projectData";
 
 export async function GET(
   request: NextRequest,
-  context: { params: { slug: string } }
+  context: { params: Promise<{ slug: string }> }
 ) {
-  const { slug } = context.params;
+  const { slug } = await context.params;
 
   const project = projectData[slug as keyof typeof projectData];
 
