@@ -28,26 +28,26 @@ export default function Hero() {
       className="relative min-h-screen flex flex-col justify-center items-center text-center px-6 overflow-hidden"
     >
       <TechCloud />
-      {/* 🔥 Parallax Background Image */}
+      {/* Parallax Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center opacity-40 dark:opacity-20"
         style={{
-          backgroundImage: "url('/Collins-Hero.jpg')",
+          backgroundImage: "url('/HERO-03.jpg')",
           transform: `translateY(${offsetY}px)`,
           transition: "transform 0.05s linear",
         }}
       />
 
-      {/* 🔥 Glass Overlay */}
+      {/* Glass Overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-transparent backdrop-blur-[2px]" />
 
-      {/* 🔥 Spotlight Glow Behind Name */}
+      {/*  Spotlight Glow Behind Name */}
       <div className="absolute top-1/3 w-[500px] h-[500px] bg-blue-600/20 blur-[120px] rounded-full pointer-events-none" />
 
-      {/* 🔥 Purple Glow */}
+      {/*  Purple Glow */}
       <div className="absolute bottom-10 right-10 w-[350px] h-[350px] bg-purple-600/20 blur-[140px] rounded-full pointer-events-none" />
 
-      {/* 🔥 Content */}
+      {/*  Content */}
       <Reveal>
         <h1 className="relative text-5xl md:text-6xl font-bold tracking-tight drop-shadow-lg">
           Hi, I’m{" "}
@@ -66,7 +66,7 @@ export default function Hero() {
           clear insights, intelligent automation, and measurable business impact.
         </p>
 
-        {/* 🔥 Buttons */}
+        {/*  Buttons */}
         <div className="relative mt-10 flex gap-4">
           <a
             href="#projects"
