@@ -1,4 +1,5 @@
 import Reveal from "./Reveal";
+import Image from "next/image";
 import { User, Briefcase, Sparkles, Target } from "lucide-react";
 
 export default function About() {
@@ -11,7 +12,7 @@ export default function About() {
         {/* Spotlight Glow */}
         <div className="absolute top-20 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-blue-600/20 blur-[150px] rounded-full pointer-events-none" />
 
-        <div className="max-w-4xl mx-auto relative">
+        <div className="max-w-5xl mx-auto relative">
           {/* Heading */}
           <h2 className="text-4xl font-bold tracking-tight text-center">
             About Me
@@ -26,21 +27,37 @@ export default function About() {
           <div className="mt-12 p-[1px] rounded-2xl bg-gradient-to-br from-white/10 to-white/5">
             <div className="rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10 p-10 shadow-xl">
 
-              {/* Quick Info Row */}
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-10">
-                <div className="flex flex-col items-center gap-2">
-                  <User className="w-7 h-7 text-blue-400" />
-                  <p className="text-gray-300 font-medium">Collins Ayidan</p>
+              {/* Profile + Info Row */}
+              <div className="flex flex-col sm:flex-row items-center gap-10 mb-12">
+
+                {/* Profile Image */}
+                <div className="relative">
+                  <div className="absolute inset-0 w-40 h-40 bg-blue-500/20 blur-2xl rounded-full" />
+                  <Image
+                    src="/profile.jpg"
+                    alt="Collins Ayidan"
+                    width={160}
+                    height={160}
+                    className="relative rounded-full border border-white/20 shadow-xl object-cover"
+                  />
                 </div>
 
-                <div className="flex flex-col items-center gap-2">
-                  <Briefcase className="w-7 h-7 text-blue-400" />
-                  <p className="text-gray-300 font-medium">Analytics & Engineering</p>
-                </div>
+                {/* Quick Info */}
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 w-full">
+                  <div className="flex flex-col items-center gap-2">
+                    <User className="w-7 h-7 text-blue-400" />
+                    <p className="text-gray-300 font-medium">Collins Ayidan</p>
+                  </div>
 
-                <div className="flex flex-col items-center gap-2">
-                  <Sparkles className="w-7 h-7 text-blue-400" />
-                  <p className="text-gray-300 font-medium">Creative Problem Solver</p>
+                  <div className="flex flex-col items-center gap-2">
+                    <Briefcase className="w-7 h-7 text-blue-400" />
+                    <p className="text-gray-300 font-medium">Analytics & Engineering</p>
+                  </div>
+
+                  <div className="flex flex-col items-center gap-2">
+                    <Sparkles className="w-7 h-7 text-blue-400" />
+                    <p className="text-gray-300 font-medium">Creative Problem Solver</p>
+                  </div>
                 </div>
               </div>
 
@@ -59,8 +76,7 @@ export default function About() {
                 My work blends technical precision with creative storytelling.
                 Whether I’m building dashboards, designing motion graphics, or
                 engineering scalable systems, I focus on clarity, intentionality,
-                and premium execution. Every project I touch is crafted to feel
-                modern, polished, and meaningful.
+                and premium execution.
               </p>
 
               <p className="mt-6 text-lg leading-relaxed text-gray-300">

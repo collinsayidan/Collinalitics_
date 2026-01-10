@@ -1,44 +1,79 @@
 "use client";
 
-export default function ThemeSwitcher() {
-  const setTheme = (theme) => {
-    document.documentElement.classList.remove(
-      "theme-emerald",
-      "theme-gold",
-      "theme-rose"
-    );
+import { useEffect, useState } from "react";
 
-    if (theme !== "default") {
-      document.documentElement.classList.add(`theme-${theme}`);
+export default function ThemeSwitcher() {
+  const [accent, setAccent] = useState("default");
+
+  // Load saved accent theme on mount
+  useEffect(() => {
+    const saved = localStorage.getItem("accent");
+    if (saved) {
+      setAccent(saved);
+      applyAccent(saved);
     }
+  }, []);
+
+  const applyAccent = (theme) => {
+    const root = document.documentElement;
+
+    // Remove all accent classes
+    root.classList.remove("theme-emerald", "theme-gold", "theme-rose");
+
+    // Apply new accent
+    if (theme !== "default") {
+      root.classList.add(`theme-${theme}`);
+    }
+  };
+
+  const changeAccent = (theme) => {
+    setAccent(theme);
+    applyAccent(theme);
+    localStorage.setItem("accent", theme);
   };
 
   return (
     <div className="flex gap-3 mt-6">
       <button
-        onClick={() => setTheme("default")}
-        className="px-3 py-1 rounded bg-white/10 text-white"
+        onClick={() => changeAccent("default")}
+        className={`px-3 py-1 rounded border ${
+          accent === "default"
+            ? "bg-card text-foreground border-border"
+            : "bg-muted text-muted-foreground border-border"
+        }`}
       >
         Default
       </button>
 
       <button
-        onClick={() => setTheme("emerald")}
-        className="px-3 py-1 rounded bg-emerald-500/20 text-emerald-300"
+        onClick={() => changeAccent("emerald")}
+        className={`px-3 py-1 rounded ${
+          accent === "emerald"
+            ? "bg-emerald-500/20 text-emerald-600 dark:text-emerald-300"
+            : "bg-muted text-muted-foreground"
+        }`}
       >
         Emerald
       </button>
 
       <button
-        onClick={() => setTheme("gold")}
-        className="px-3 py-1 rounded bg-amber-500/20 text-amber-300"
+        onClick={() => changeAccent("gold")}
+        className={`px-3 py-1 rounded ${
+          accent === "gold"
+            ? "bg-amber-500/20 text-amber-600 dark:text-amber-300"
+            : "bg-muted text-muted-foreground"
+        }`}
       >
         Gold
       </button>
 
       <button
-        onClick={() => setTheme("rose")}
-        className="px-3 py-1 rounded bg-rose-500/20 text-rose-300"
+        onClick={() => changeAccent("rose")}
+        className={`px-3 py-1 rounded ${
+          accent === "rose"
+            ? "bg-rose-500/20 text-rose-600 dark:text-rose-300"
+            : "bg-muted text-muted-foreground"
+        }`}
       >
         Rose
       </button>

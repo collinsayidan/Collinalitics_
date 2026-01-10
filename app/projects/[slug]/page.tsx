@@ -2,6 +2,8 @@ import Reveal from "@/app/components/Reveal";
 import ScrollProgress from "@/app/components/ScrollProgress";
 import { projectData, projectSlugs, ProjectSlug } from "../projectData";
 
+
+
 export async function generateMetadata({
   params,
 }: {

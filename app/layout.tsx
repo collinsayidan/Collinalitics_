@@ -7,6 +7,11 @@ import CursorGlow from "./components/CursorGlow";
 import PageTransition from "./components/PageTransition";
 import NewsletterPopup from "./components/NewsletterPopup";
 import ScrollProgress from "./components/ScrollProgress";
+import ScrollToHash from "./ScrollToHash";
+
+
+
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -49,8 +54,8 @@ export default function RootLayout({
         <ScrollProgress />
         <Navbar />
         <NewsletterPopup />
-
         <PageTransition>
+        <ScrollToHash />
           {children}
         </PageTransition>
       </body>

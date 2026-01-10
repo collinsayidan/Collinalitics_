@@ -1,13 +1,13 @@
 export const dynamic = "force-dynamic";
 
 import { NextRequest, NextResponse } from "next/server";
-import { projectData } from "@/app/projects/projectData";
+import { projectData } from "@/app/projects/projectData"; // ✅ correct import
 
 export async function GET(
   request: NextRequest,
-  context: { params: Promise<{ slug: string }> }
+  context: { params: { slug: string } } // ✅ params is NOT a Promise
 ) {
-  const { slug } = await context.params;
+  const { slug } = context.params; // ✅ no await
 
   const project = projectData[slug as keyof typeof projectData];
 

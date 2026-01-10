@@ -1,7 +1,7 @@
 export const projectData = {
   "analytics-dashboard": {
     title: "Revenue Intelligence Dashboard",
-    image: "/projects/analytics.png",
+    image: "/DB.jpg",
     tech: ["Power BI", "SQL", "DAX"],
     description: `
 Project Overview:
@@ -57,7 +57,7 @@ Business Impact:
 • Improved visibility led to a 9% increase in quarterly revenue forecasting accuracy.
 `,
     gallery: [
-      "/projects/analytics-1.png",
+      "/projects/DB.jpg",
       "/projects/analytics-2.png",
       "/projects/analytics-3.png",
     ],
@@ -65,8 +65,8 @@ Business Impact:
   },
 
   "system-automation": {
-    title: "Data Pipeline Automation",
-    image: "/projects/automation.png",
+    title: "System Automation",
+    image: "/automation.jpg",
     tech: ["Python", "Bash", "Azure"],
     description: `
 Business Problem:
@@ -131,7 +131,7 @@ Business Impact:
 
   "customer-churn-prediction": {
     title: "Customer Churn Prediction Model",
-    image: "/projects/churn.png",
+    image: "/customerchurn.jpg",
     tech: ["Python", "Pandas", "Scikit-Learn"],
     description: `
 Business Problem:
@@ -202,7 +202,7 @@ Business Impact:
 
   "marketing-performance-analytics": {
   title: "Marketing Performance Analytics",
-  image: "/projects/marketing.png",
+  image: "/market-02.jpg",
   tech: ["Power BI", "SQL", "Python"],
   description: `
 Project Overview:
