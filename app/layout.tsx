@@ -9,9 +9,7 @@ import NewsletterPopup from "./components/NewsletterPopup";
 import ScrollProgress from "./components/ScrollProgress";
 import ScrollToHash from "./ScrollToHash";
 
-
-
-
+import { Suspense } from "react";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -45,19 +43,22 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    // Start in dark mode by default
+    <html lang="en" className="dark" suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[var(--background)] text-[var(--foreground)]`}
       >
-        {/* These are client components — allowed inside body */}
         <CursorGlow />
         <ScrollProgress />
         <Navbar />
         <NewsletterPopup />
-        <PageTransition>
-        <ScrollToHash />
-          {children}
-        </PageTransition>
+
+        <Suspense fallback={null}>
+          <PageTransition>
+            <ScrollToHash />
+            {children}
+          </PageTransition>
+        </Suspense>
       </body>
     </html>
   );

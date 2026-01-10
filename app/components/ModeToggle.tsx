@@ -11,7 +11,7 @@ export default function ModeToggle({ onToggle }: ModeToggleProps) {
   const [mode, setMode] = useState<"light" | "dark">("light");
 
   useEffect(() => {
-    const saved = localStorage.getItem("mode") as "light" | "dark" | null;
+    const saved = localStorage.getItem("theme") as "light" | "dark" | null;
     if (saved) {
       setMode(saved);
       document.documentElement.classList.toggle("dark", saved === "dark");
@@ -19,19 +19,16 @@ export default function ModeToggle({ onToggle }: ModeToggleProps) {
   }, []);
 
   const toggleMode = (e: React.MouseEvent<HTMLButtonElement>) => {
-    // Stop bubbling so dropdown button doesn't toggle twice
     e.preventDefault();
     e.stopPropagation();
-
-    // ❌ Removed stopImmediatePropagation (this was breaking dropdown close)
 
     const newMode = mode === "dark" ? "light" : "dark";
     setMode(newMode);
 
     document.documentElement.classList.toggle("dark", newMode === "dark");
-    localStorage.setItem("mode", newMode);
+    localStorage.setItem("theme", newMode);
 
-    onToggle?.(); // closes dropdown
+    onToggle?.();
   };
 
   return (
