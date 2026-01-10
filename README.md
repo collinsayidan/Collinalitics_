@@ -65,6 +65,9 @@ Optimized metadata, fast load times, and clean semantic structure.
 
 ---
 
+## Preview Screenshots
+
+
 ## Live Demo
 
 **https://collinalitics.com**
